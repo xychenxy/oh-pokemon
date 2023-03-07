@@ -12,19 +12,19 @@ import {
 	AvatarContainer,
 } from "./style";
 import type {
-	Pokemon,
 	PokemonStat,
 	TableHeaderGroup,
 	PokemonTypeBadge,
 	PokemonType,
-} from "../../types";
+} from "../../store/pokemon/pokemon-types";
+
 import Badge from "../badge/badge";
 import React from "react";
-
-type PokemonListProps = {
-	pokemonData: Pokemon[];
-	pokemonBadges: PokemonTypeBadge[];
-};
+import { useSelector } from "react-redux";
+import {
+	selectPokemonTableData,
+	selectPokemonTypes,
+} from "../../store/pokemon/pokemon-selector";
 
 export const headerData: TableHeaderGroup[] = [
 	{ name: "Pokemon", accessor: "name", group: "name" },
@@ -37,7 +37,10 @@ export const headerData: TableHeaderGroup[] = [
 	{ name: "Hit Points", accessor: "hp", group: "stats" },
 ];
 
-const PokemonTable = ({ pokemonData, pokemonBadges }: PokemonListProps) => {
+const PokemonTable = () => {
+	const pokemonTableData = useSelector(selectPokemonTableData);
+	const pokemonTypes = useSelector(selectPokemonTypes);
+
 	// This is used to sort stats order based on header accessor
 	// Bonus: if remove any of stats group in headerData, table is still working
 	const getSortedStats = (stats: PokemonStat[]): PokemonStat[] => {
@@ -61,7 +64,7 @@ const PokemonTable = ({ pokemonData, pokemonBadges }: PokemonListProps) => {
 	const getBadgeTypes = (types: PokemonType[]): PokemonTypeBadge[] => {
 		let pokemon: PokemonTypeBadge[] = [];
 		types.forEach((t) => {
-			const result = pokemonBadges.filter((p) => p.type === t.type_name);
+			const result = pokemonTypes.filter((p) => p.type === t.type_name);
 			pokemon = [...pokemon, ...result];
 		});
 		return pokemon;
@@ -79,7 +82,7 @@ const PokemonTable = ({ pokemonData, pokemonBadges }: PokemonListProps) => {
 						</Tr>
 					</Thead>
 					<Tbody>
-						{pokemonData.map((d) => {
+						{pokemonTableData.map((d) => {
 							return (
 								<Tr key={d.id}>
 									<Td>

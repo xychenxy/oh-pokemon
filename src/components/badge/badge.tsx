@@ -1,5 +1,5 @@
 import { BadgeContainer } from "./style";
-import type { PokemonTypeBadge } from "../../types";
+import type { PokemonTypeBadge } from "../../store/pokemon/pokemon-types";
 
 type BadgeProps = {
 	pokemonTypeBadge: PokemonTypeBadge;
