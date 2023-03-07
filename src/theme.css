@@ -1,0 +1,50 @@
+:root {
+	/* UI Colors */
+	--color-white: #fff;
+	--color-black: #000;
+	--color-gray: #e3e7ed;
+	--color-gray-light: #fbfcfd;
+	--color-gray-dark: #6a757f;
+	--color-blue: #3169b1;
+	--color-blue-light: #f1f3f9;
+	--color-red: #ff0008;
+	--color-red-alt: #e60007;
+
+	/* Pokémon Types */
+	--color-type-bug-alt: #6d7815;
+	--color-type-bug: #a8b820;
+	--color-type-dark-alt: #49392f;
+	--color-type-dark: #705848;
+	--color-type-dragon-alt: #4924a1;
+	--color-type-dragon: #7038f8;
+	--color-type-electric-alt: #88721a;
+	--color-type-electric: #f8d030;
+	--color-type-fairy-alt: #9b6470;
+	--color-type-fairy: #ee99ac;
+	--color-type-fighting-alt: #7d1f1a;
+	--color-type-fighting: #c03028;
+	--color-type-fire-alt: #9c531f;
+	--color-type-fire: #f08030;
+	--color-type-flying-alt: #6d5e9c;
+	--color-type-flying: #a890f0;
+	--color-type-ghost-alt: #493963;
+	--color-type-ghost: #705898;
+	--color-type-grass-alt: #4e8234;
+	--color-type-grass: #78c850;
+	--color-type-ground-alt: #85723e;
+	--color-type-ground: #e0c068;
+	--color-type-ice-alt: #638d8d;
+	--color-type-ice: #98d8d8;
+	--color-type-normal-alt: #6d6d4e;
+	--color-type-normal: #a8a878;
+	--color-type-poison-alt: #682a68;
+	--color-type-poison: #a040a0;
+	--color-type-psychic-alt: #a13959;
+	--color-type-psychic: #f85888;
+	--color-type-rock-alt: #786824;
+	--color-type-rock: #b8a038;
+	--color-type-steel-alt: #747483;
+	--color-type-steel: #b8b8d0;
+	--color-type-water-alt: #445e9c;
+	--color-type-water: #6890f0;
+}
